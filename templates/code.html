@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>L'ARTISTE | The Curated Light Studio</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@300;400;600;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary": "#715b3e",
+                    "surface-container-high": "#ebe8e3",
+                    "error-container": "#ffdad6",
+                    "tertiary-container": "#b9b2aa",
+                    "on-tertiary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "on-background": "#1c1c19",
+                    "on-primary-container": "#554227",
+                    "on-secondary-container": "#73640e",
+                    "on-error-container": "#93000a",
+                    "inverse-surface": "#31302d",
+                    "on-secondary": "#ffffff",
+                    "surface-container-highest": "#e5e2dd",
+                    "secondary-container": "#f7e382",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-fixed": "#e9e1d9",
+                    "on-primary-fixed-variant": "#574329",
+                    "primary-fixed": "#fcdeba",
+                    "tertiary": "#635e57",
+                    "on-primary-fixed": "#281903",
+                    "surface-container": "#f0ede8",
+                    "background": "#fcf9f4",
+                    "surface-tint": "#715b3e",
+                    "secondary-fixed": "#f7e382",
+                    "on-surface": "#1c1c19",
+                    "inverse-primary": "#dfc29f",
+                    "surface-bright": "#fcf9f4",
+                    "on-tertiary-fixed-variant": "#4b4640",
+                    "outline": "#7f7663",
+                    "surface-dim": "#dcdad5",
+                    "on-tertiary-container": "#49443f",
+                    "primary-container": "#caae8d",
+                    "on-secondary-fixed-variant": "#524700",
+                    "surface": "#fcf9f4",
+                    "outline-variant": "#d0c5af",
+                    "error": "#ba1a1a",
+                    "secondary-fixed-dim": "#dac769",
+                    "on-tertiary-fixed": "#1e1b16",
+                    "on-secondary-fixed": "#211b00",
+                    "on-primary": "#ffffff",
+                    "surface-container-low": "#f6f3ee",
+                    "inverse-on-surface": "#f3f0eb",
+                    "secondary": "#6c5e06",
+                    "on-surface-variant": "#4d4635",
+                    "tertiary-fixed-dim": "#cdc5bd",
+                    "primary-fixed-dim": "#dfc29f",
+                    "surface-variant": "#e5e2dd"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Noto Serif"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar Component -->
+<header class="fixed top-0 w-full z-50 bg-[#fcf9f4]/70 dark:bg-[#1c1c19]/70 backdrop-blur-md">
+<div class="flex justify-between items-center px-8 py-6 w-full max-w-screen-2xl mx-auto">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#715b3e] dark:text-[#caae8d]" data-icon="menu">menu</span>
+<span class="text-2xl font-serif italic text-[#1c1c19] dark:text-[#fcf9f4]">L'ARTISTE</span>
+</div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="font-['Manrope'] uppercase tracking-widest text-[10px] text-[#715b3e] dark:text-[#caae8d] border-b border-[#715b3e] pb-1" href="#">Editorial</a>
+<a class="font-['Manrope'] uppercase tracking-widest text-[10px] text-[#1c1c19] dark:text-[#fcf9f4] opacity-80 hover:opacity-100 transition-opacity duration-300" href="#">Gallery</a><a class="font-['Manrope'] uppercase tracking-widest text-[10px] text-[#1c1c19] dark:text-[#fcf9f4] opacity-80 hover:opacity-100 transition-opacity duration-300" href="#">Films</a>
+<a class="font-['Manrope'] uppercase tracking-widest text-[10px] text-[#1c1c19] dark:text-[#fcf9f4] opacity-80 hover:opacity-100 transition-opacity duration-300" href="#">Contact Us</a>
+</nav>
+<div class="flex items-center gap-2"><div class="flex items-center gap-4 mr-4">
+<a class="text-[#1c1c19] dark:text-[#fcf9f4] opacity-80 hover:opacity-100 transition-opacity" href="#">
+<span class="material-symbols-outlined text-lg">brand_awareness</span>
+</a>
+<a class="text-[#1c1c19] dark:text-[#fcf9f4] opacity-80 hover:opacity-100 transition-opacity" href="#">
+<span class="material-symbols-outlined text-lg">play_circle</span>
+</a>
+</div>
+<button class="bg-[#715b3e] text-white px-5 py-2 text-[10px] tracking-widest uppercase font-bold hover:scale-95 transition-transform duration-300 ease-out">
+                    Contact Us
+                </button>
+</div>
+</div>
+</header>
+<main>
+<!-- Section 1: Hero Section -->
+<section class="relative h-screen w-full flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-surface-dim relative">
+<img class="w-full h-full object-cover opacity-60 mix-blend-multiply" data-alt="Cinematic wide shot of a high-fashion model walking through a sun-drenched minimalist architecture setting with dramatic shadows and light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3v41BuwA8M9dMyGB-YcUENsf0tFboO4B3w6JpgEHgkZXsplgLz250RGKTOs_byaJAdHswWNB7fuLDaIhMX7Omi73BCB8-wdNz17VeR0lw9LdhHt-5ia4MDnlkbjRYtsDnzNA4jNUCMRT5OU0ccIyJD0KB3jRXwelwj15EuO3HZdDRJhPB22MXWld5V8PDMBC7azbriffOZHHnoxXa1avVKuWHQHPgbXGhh6FQQJAMS8BadHLuEv8G1IcYU5U_z5FkcypDC_FJxJEL"/>
+<div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background/40"></div>
+</div>
+</div>
+<div class="relative z-10 text-center px-6 max-w-4xl">
+<span class="font-label uppercase tracking-[0.4em] text-[10px] text-primary mb-6 block">The Curated Light Studio</span>
+<h1 class="font-headline text-5xl md:text-8xl text-on-surface leading-tight tracking-tight mb-8 italic">
+                    Capturing the <br/>
+<span class="font-normal not-italic">Silent Dialogue</span>
+</h1>
+<div class="flex flex-col items-center gap-6">
+<p class="font-body text-sm md:text-base text-on-surface-variant max-w-md leading-relaxed">
+                        High-end editorial photography that transcends the visual, weaving narratives of light, shadow, and human essence.
+                    </p>
+<div class="w-px h-24 bg-primary/30 mt-4"></div>
+</div>
+</div>
+</section>
+<!-- Section 2: Abstract Editorial Gallery -->
+<section class="py-32 px-6 md:px-24 bg-surface overflow-hidden">
+<div class="max-w-screen-2xl mx-auto relative">
+<div class="mb-24 flex flex-col md:flex-row md:items-end justify-between gap-8">
+<div class="max-w-xl">
+<h2 class="font-headline text-4xl md:text-6xl text-on-surface mb-6">Editorial <br/>Manifesto</h2>
+<p class="font-body text-on-surface-variant leading-loose italic">Exploring the boundaries between high-fashion and fine art through a lens of intentional asymmetry.</p>
+</div>
+<span class="font-label text-[10px] tracking-[0.2em] uppercase text-primary border-b border-primary/20 pb-2">Volume 01 // 2024</span>
+</div>
+<!-- Bento-inspired Asymmetric Grid -->
+<div class="grid grid-cols-12 gap-4 md:gap-8 relative">
+<!-- Overlapping Elements -->
+<div class="col-span-12 md:col-span-7 relative z-10">
+<div class="aspect-[4/5] bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 ease-out" data-alt="Avant-garde fashion portrait of a person with sculptural metallic jewelry in a stark white minimalist studio with sharp shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCU7T5U8wSYi0vJpxuCAHCXl9FZIo0ZOGojAAp6Qg9DPJAsazCDruqePbs9ETe7GJ4cJdX2eoCx3w2u_MhG2jwJ4OgzYxMDjb-KvJ9EfdkYyhZdXKuqgpL6vmpjcgZQb4sxWStoNM7JkkXtuimTHKmFWaKNqbj7i-tJxSVNECLVJFjXeHUuRoSLRj8Gdm6IxZi6dcp_i-YOIMQRjCl9yWvn2GaZ0U9s-GBFI9aJAHxDfTzE4LuVcouRyOaZMc-x-j7VvzAaN_1JbQW8"/>
+</div>
+<div class="absolute -bottom-12 -right-8 md:-right-16 bg-surface-container-lowest p-8 shadow-2xl shadow-on-surface/5 max-w-xs z-20 hidden md:block">
+<p class="font-label text-[10px] tracking-widest uppercase text-primary mb-4">Paris Fashion Week</p>
+<p class="font-headline text-xl italic leading-snug">"The interplay of texture and absence."</p>
+</div>
+</div>
+<div class="col-span-12 md:col-span-5 flex flex-col gap-8 md:pt-32">
+<div class="aspect-square bg-surface-container-high overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="Close-up artistic shot of flowing silk fabric caught in mid-air against a warm golden hour sunset light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1UFx9H2VheN-9naFru1E5Q6sRKzfgCVzEjLFqyPRv-04Ke2v-Trw2-R1k0aFIgvHi19Z0q7JNnBDP4PPhwTuu3hpLQtw6eWNqCa-lX1q8AORZPtjhMcBizJYBBJRUrmC1x6ZJ0KYKxl9yfZwvrnjNIyiZUJVp2sKgb-eyrhBg1jRjkI57B48Oyck-0_iEW_7swMlAou5QxqzXiev2Yjb-4tqebOwJXWyM5pILSFBny53HI16t3AtFZEjvXAJQKfTFNYQpD8q2duvL"/>
+<div class="absolute inset-0 bg-primary/10 mix-blend-overlay"></div>
+</div>
+<div class="flex items-start gap-4 p-4 border-l border-primary/10">
+<span class="font-headline text-4xl text-primary/20 italic">02</span>
+<p class="font-body text-xs leading-relaxed text-on-surface-variant uppercase tracking-wider">
+                                Captured in the limestone quarries of Provence, where light behaves as a physical medium.
+                            </p>
+</div>
+</div>
+<!-- Offset Row -->
+<div class="col-span-12 md:col-span-4 md:-mt-24 z-20">
+<div class="aspect-[3/4] bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover grayscale brightness-110" data-alt="Black and white high-contrast portrait of an elegant woman looking through a sheer lace veil in soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPNuvqQYRaEJj612hUiPb_bxuZLcKUFMj4xllX1bL0xvbDeHjh95d5jqitBMkjLkrxyhlVAailko1dVqMF15Fe4A0Ui6zWcBgEA8QCEshf1hwkHsT1XipefG9kZOHvb8ELVa9A3btETG9LIfSSYpy09JRTSB54Optv0q7GCpGF00u3XdR0hoCNDt85ZDKmKjUeEHQWHmcRl11USlWx3COfGa2s5YOJFhvyUv0nUub20Qw88EZrREHQWzO63-6bw9Sf55lEYNYoFNSf"/>
+</div>
+</div><div class="col-span-12 md:col-span-8 flex items-center justify-center p-8 md:p-16 border border-primary/10">
+<div class="max-w-lg">
+<h3 class="font-headline text-3xl md:text-4xl text-on-surface mb-6 italic">The Curated Vision</h3>
+<p class="font-headline text-lg md:text-xl text-on-surface-variant leading-relaxed opacity-90">
+            At the intersection of light and shadow, our studio captures the raw, unspoken narratives of the human experience. We specialize in high-end editorial and portrait photography, where every frame is a curated dialogue between the subject and the lens.
+        </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: Domains Section -->
+<section class="py-32 bg-surface-container-low">
+<div class="max-w-screen-2xl mx-auto px-6 md:px-24 text-center">
+<h2 class="font-headline text-3xl md:text-5xl mb-20">Our Domains</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Editorial Card -->
+<div class="group bg-surface-container-lowest p-10 flex flex-col items-center text-center hover:bg-primary transition-colors duration-500 ease-out">
+<span class="material-symbols-outlined text-primary group-hover:text-white mb-8 text-4xl" data-icon="auto_awesome">auto_awesome</span>
+<h3 class="font-headline text-xl mb-4 group-hover:text-white transition-colors duration-500">Editorial</h3>
+<p class="font-body text-xs text-on-surface-variant group-hover:text-white/80 transition-colors duration-500 leading-loose">Narrative-driven visual storytelling for high-end fashion monographs and global publications.</p>
+<div class="mt-8 w-8 h-px bg-primary/20 group-hover:bg-white/40 transition-colors"></div>
+</div>
+<!-- Portrait Card -->
+<div class="group bg-surface-container-lowest p-10 flex flex-col items-center text-center hover:bg-primary transition-colors duration-500 ease-out">
+<span class="material-symbols-outlined text-primary group-hover:text-white mb-8 text-4xl" data-icon="person">person</span>
+<h3 class="font-headline text-xl mb-4 group-hover:text-white transition-colors duration-500">Portrait</h3>
+<p class="font-body text-xs text-on-surface-variant group-hover:text-white/80 transition-colors duration-500 leading-loose">Intimate studies of the human spirit, focused on authenticity and the quiet moments in between.</p>
+<div class="mt-8 w-8 h-px bg-primary/20 group-hover:bg-white/40 transition-colors"></div>
+</div>
+<!-- Commercial Card -->
+<div class="group bg-surface-container-lowest p-10 flex flex-col items-center text-center hover:bg-primary transition-colors duration-500 ease-out">
+<span class="material-symbols-outlined text-primary group-hover:text-white mb-8 text-4xl" data-icon="campaign">campaign</span>
+<h3 class="font-headline text-xl mb-4 group-hover:text-white transition-colors duration-500">Commercial</h3>
+<p class="font-body text-xs text-on-surface-variant group-hover:text-white/80 transition-colors duration-500 leading-loose">Refining brand identities through high-impact imagery that balances luxury and conversion.</p>
+<div class="mt-8 w-8 h-px bg-primary/20 group-hover:bg-white/40 transition-colors"></div>
+</div>
+<!-- Landscape Card -->
+<div class="group bg-surface-container-lowest p-10 flex flex-col items-center text-center hover:bg-primary transition-colors duration-500 ease-out">
+<span class="material-symbols-outlined text-primary group-hover:text-white mb-8 text-4xl" data-icon="landscape">landscape</span>
+<h3 class="font-headline text-xl mb-4 group-hover:text-white transition-colors duration-500">Landscape</h3>
+<p class="font-body text-xs text-on-surface-variant group-hover:text-white/80 transition-colors duration-500 leading-loose">Cinematic explorations of nature's grandeur, treated with the same precision as fine art.</p>
+<div class="mt-8 w-8 h-px bg-primary/20 group-hover:bg-white/40 transition-colors"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 4: Moments in Focus Gallery -->
+<section class="py-32 bg-surface">
+<div class="max-w-screen-2xl mx-auto px-6 md:px-24">
+<div class="text-center mb-20">
+<h2 class="font-headline text-4xl md:text-6xl text-on-surface italic">Moments in Focus</h2>
+<div class="w-24 h-px bg-primary/30 mx-auto mt-8"></div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10">
+<!-- Gallery Item 1 -->
+<div class="aspect-[3/4] overflow-hidden bg-surface-container-high group cursor-crosshair">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 ease-in-out group-hover:scale-105" data-alt="Architectural fashion photography featuring beige tones and soft shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB35m5f8U_k7uC6X9v_O_Wn5L0pZqX_U4J4S5z_6M7B8v9w0x1y2z3A4B5C6D7E8F9G0H1I2J3K4L5M6N7O8P9Q0R"/>
+</div>
+<!-- Gallery Item 2 -->
+<div class="aspect-[3/4] overflow-hidden bg-surface-container-high group cursor-crosshair">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out" data-alt="Minimalist editorial portrait with warm beige lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9k8l7m6n5o4p3q2r1s0t9u8v7w6x5y4z3a2b1c0d9e8f7g6h5i4j3k2l1m0n9o8p7q6r5s4t3u2v1"/>
+</div>
+<!-- Gallery Item 3 -->
+<div class="aspect-[3/4] overflow-hidden bg-surface-container-high group cursor-crosshair">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 ease-in-out group-hover:scale-105" data-alt="Close up of fabric textures in royal beige palette" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0b1c2d3e4f5g6h7i8j9k0l1m2n3o4p5q6r7s8t9u0v1w2x3y4z5a6b7c8d9e0f1g2h3i4j5"/>
+</div>
+<!-- Gallery Item 4 -->
+<div class="aspect-[3/4] overflow-hidden bg-surface-container-high group cursor-crosshair">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out" data-alt="High fashion silhouette against minimalist wall" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9p8o7n6m5l4k3j2i1h0g9f8e7d6c5b4a3z2y1x0w9v8u7t6s5r4q3p2o1n0m9l8k7j6"/>
+</div>
+<!-- Gallery Item 5 -->
+<div class="aspect-[3/4] overflow-hidden bg-surface-container-high group cursor-crosshair">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 ease-in-out group-hover:scale-105" data-alt="Abstract shadow play in a high-end studio setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuF2a3b4c5d6e7f8g9h0i1j2k3l4m5n6o7p8q9r0s1t2u3v4w5x6y7z8a9b0c1d2e3f4g5"/>
+</div>
+<!-- Gallery Item 6 -->
+<div class="aspect-[3/4] overflow-hidden bg-surface-container-high group cursor-crosshair">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out" data-alt="Portrait study with warm light and shadow interplay" src="https://lh3.googleusercontent.com/aida-public/AB6AXuE8v7u6t5s4r3q2p1o0n9m8l7k6j5i4h3g2f1e0d9c8b7a6z5y4x3w2v1u0t9s8r7q6"/>
+</div>
+<!-- Gallery Item 7 -->
+<div class="aspect-[3/4] overflow-hidden bg-surface-container-high group cursor-crosshair">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 ease-in-out group-hover:scale-105" data-alt="Cinematic landscape fragment in beige tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuH1z2y3x4w5v6u7t8s9r0q1p2o3n4m5l6k7j8i9h0g1f2e3d4c5b6a7z8y9x0w1v2u3"/>
+</div>
+<!-- Gallery Item 8 -->
+<div class="aspect-[3/4] overflow-hidden bg-surface-container-high group cursor-crosshair">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out" data-alt="Editorial fashion piece highlighting texture and light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuG7g6f5e4d3c2b1a0z9y8x7w6v5u4t3s2r1q0p9o8n7m6l5k4j3i2h1g0f9e8d7c6"/>
+</div>
+<!-- Gallery Item 9 -->
+<div class="aspect-[3/4] overflow-hidden bg-surface-container-high group cursor-crosshair">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 ease-in-out group-hover:scale-105" data-alt="Final gallery piece focusing on artistic detail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuJ3j4k5l6m7n8o9p0q1r2s3t4u5v6w7x8y9z0a1b2c3d4e5f6g7h8i9j0k1l2m3n4"/>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-32 px-6">
+<div class="max-w-4xl mx-auto bg-primary-container p-12 md:p-24 text-center">
+<h2 class="font-headline text-3xl md:text-5xl text-on-primary-container mb-8">Ready to Curate Your Light?</h2>
+<button class="bg-primary text-white font-label uppercase tracking-widest text-xs px-10 py-5 hover:scale-105 transition-transform duration-500 shadow-xl shadow-primary/20">
+                    Start a Conversation
+                </button>
+</div>
+</section>
+</main>
+<!-- NavigationDrawer (Represented as a slide-out mock or static list for mobile view) -->
+<div class="hidden fixed right-0 top-0 h-full w-80 z-[60] p-12 bg-[#f6f3ee] dark:bg-[#1c1c19] shadow-2xl shadow-[#1c1c19]/5">
+<div class="font-serif text-xl mb-8">THE CURATED LIGHT</div>
+<div class="flex flex-col gap-6">
+<a class="flex items-center gap-4 text-[#715b3e] font-bold bg-[#ffffff] dark:bg-[#2a2a26] p-4 font-['Manrope'] uppercase tracking-[0.1em] text-label-md" href="#">
+<span class="material-symbols-outlined" data-icon="auto_awesome">auto_awesome</span>
+                Editorial
+            </a><a class="flex items-center gap-4 text-[#1c1c19] dark:text-[#fcf9f4] p-4 font-['Manrope'] uppercase tracking-[0.1em] text-label-md hover:bg-[#ffffff] transition-colors duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="movie">movie</span>
+    Films
+</a>
+<a class="flex items-center gap-4 text-[#1c1c19] dark:text-[#fcf9f4] p-4 font-['Manrope'] uppercase tracking-[0.1em] text-label-md hover:bg-[#ffffff] transition-colors duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+                Contact Us
+            </a>
+<a class="flex items-center gap-4 text-[#1c1c19] dark:text-[#fcf9f4] p-4 font-['Manrope'] uppercase tracking-[0.1em] text-label-md hover:bg-[#ffffff] transition-colors duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="photo_library">photo_library</span>
+                Gallery
+            </a>
+</div>
+<div class="mt-auto pt-12 flex gap-6 justify-center border-t border-[#715b3e]/10">
+<a class="text-[#715b3e]" href="#"><span class="material-symbols-outlined">brand_awareness</span></a>
+<a class="text-[#715b3e]" href="#"><span class="material-symbols-outlined">play_circle</span></a>
+</div></div>
+<!-- Footer Component -->
+<footer class="w-full py-16 bg-[#f6f3ee] dark:bg-[#1c1c19] flex flex-col items-center gap-8 w-full border-none">
+<div class="font-serif italic text-lg">L'ARTISTE</div>
+<div class="flex gap-8">
+<a class="font-['Manrope'] text-[10px] tracking-widest uppercase text-[#715b3e] underline underline-offset-4" href="#">Editorial</a><a class="font-['Manrope'] text-[10px] tracking-widest uppercase text-[#1c1c19]/60 hover:text-[#715b3e] transition-colors duration-500" href="#">Instagram</a>
+<a class="font-['Manrope'] text-[10px] tracking-widest uppercase text-[#1c1c19]/60 hover:text-[#715b3e] transition-colors duration-500" href="#">YouTube</a>
+<a class="font-['Manrope'] text-[10px] tracking-widest uppercase text-[#1c1c19]/60 hover:text-[#715b3e] transition-colors duration-500" href="#">Privacy</a>
+<a class="font-['Manrope'] text-[10px] tracking-widest uppercase text-[#1c1c19]/60 hover:text-[#715b3e] transition-colors duration-500" href="#">Terms</a>
+</div>
+<div class="font-['Manrope'] text-[10px] tracking-widest uppercase text-on-surface-variant/40 mt-4">
+            © 2024 THE CURATED LIGHT STUDIO. ALL RIGHTS RESERVED.
+        </div>
+</footer>
+</body></html>

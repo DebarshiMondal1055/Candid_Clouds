@@ -1,0 +1,628 @@
+<!doctype html>
+
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Manrope:wght@300;400;500;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-background": "#1c1c19",
+              "secondary-fixed": "#f7e382",
+              "surface-container-high": "#ebe8e3",
+              "error-container": "#ffdad6",
+              "on-secondary-fixed": "#211b00",
+              "on-secondary-container": "#73640e",
+              "on-surface-variant": "#4d4635",
+              "on-primary-container": "#554227",
+              "primary-fixed-dim": "#dfc29f",
+              "on-error": "#ffffff",
+              "on-secondary-fixed-variant": "#524700",
+              "surface-container-highest": "#e5e2dd",
+              surface: "#fcf9f4",
+              "primary-container": "#caae8d",
+              "inverse-on-surface": "#f3f0eb",
+              "tertiary-container": "#b9b2aa",
+              "surface-tint": "#715b3e",
+              "surface-container": "#f0ede8",
+              "on-error-container": "#93000a",
+              "surface-container-lowest": "#ffffff",
+              "surface-bright": "#fcf9f4",
+              background: "#fcf9f4",
+              "surface-variant": "#e5e2dd",
+              outline: "#7f7663",
+              "outline-variant": "#d0c5af",
+              "on-primary": "#ffffff",
+              "primary-fixed": "#fcdeba",
+              "on-tertiary-fixed-variant": "#4b4640",
+              "surface-container-low": "#f6f3ee",
+              "on-primary-fixed": "#281903",
+              "inverse-surface": "#31302d",
+              "tertiary-fixed-dim": "#cdc5bd",
+              secondary: "#6c5e06",
+              "on-tertiary": "#ffffff",
+              "secondary-fixed-dim": "#dac769",
+              "on-surface": "#1c1c19",
+              "tertiary-fixed": "#e9e1d9",
+              tertiary: "#635e57",
+              "on-tertiary-container": "#49443f",
+              error: "#ba1a1a",
+              "on-tertiary-fixed": "#1e1b16",
+              "on-secondary": "#ffffff",
+              "surface-dim": "#dcdad5",
+              "secondary-container": "#f7e382",
+              primary: "#715b3e",
+              "inverse-primary": "#dfc29f",
+              "on-primary-fixed-variant": "#574329",
+            },
+            borderRadius: {
+              DEFAULT: "0.125rem",
+              lg: "0.25rem",
+              xl: "0.5rem",
+              full: "0.75rem",
+            },
+            fontFamily: {
+              headline: ["Noto Serif"],
+              body: ["Manrope"],
+              label: ["Manrope"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 300,
+          "GRAD" 0,
+          "opsz" 24;
+      }
+      body {
+        font-family: "Manrope", sans-serif;
+      }
+      h1,
+      h2,
+      h3 {
+        font-family: "Noto Serif", serif;
+      }
+    </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+  </head>
+  <body class="bg-background text-on-surface antialiased">
+    <!-- TopAppBar Component -->
+    <nav
+      class="fixed top-0 w-full z-50 bg-[#fcf9f4]/70 dark:bg-[#1c1c19]/70 backdrop-blur-xl shadow-[0_20px_50px_rgba(28,28,25,0.05)]"
+    >
+      <div
+        class="flex justify-between items-center px-8 py-6 w-full max-w-screen-2xl mx-auto"
+      >
+        <div class="flex items-center gap-4">
+          <span
+            class="material-symbols-outlined text-[#715b3e] dark:text-[#caae8d]"
+            data-icon="camera"
+            >camera</span
+          >
+          <span
+            class="text-2xl font-serif tracking-tighter text-[#715b3e] dark:text-[#caae8d] uppercase"
+            >STUDIO</span
+          >
+        </div>
+        <div
+          class="hidden md:flex items-center gap-10 font-['Noto_Serif'] tracking-tight"
+        >
+          <a
+            class="text-[#1c1c19]/60 dark:text-[#fcf9f4]/60 font-medium hover:text-[#715b3e] transition-colors duration-300 ease-out"
+            href="#"
+            >Editorial</a
+          >
+          <a
+            class="text-[#715b3e] dark:text-[#caae8d] font-bold border-b-2 border-[#715b3e] pb-1"
+            href="#"
+            >Films</a
+          >
+          <a
+            class="text-[#1c1c19]/60 dark:text-[#fcf9f4]/60 font-medium hover:text-[#715b3e] transition-colors duration-300 ease-out"
+            href="#"
+            >Archive</a
+          >
+        </div>
+        <button
+          class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-6 py-2.5 rounded-md font-label text-xs uppercase tracking-widest hover:opacity-90 transition-all duration-300"
+        >
+          Contact Us
+        </button>
+      </div>
+    </nav>
+    <!-- Hero Section -->
+    <header
+      class="relative h-screen w-full flex items-center justify-center overflow-hidden"
+    >
+      <div class="absolute inset-0 z-0">
+        <img
+          class="w-full h-full object-cover"
+          data-alt="Cinematic wide shot of a Mediterranean coast at sunset with warm golden light reflecting off the ripples of the deep blue water"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6gtuXRLBRo80lWf028eoPpOJRYFpmx2xR_2kLsVp6F9NLrAjfKzTN8ztlCsphjqPJaUb6Vj0Kna591DXsuhmvDICrO8ktYqaUUkcww35R8mkWwPVSgPjG2XHi7mr-XzvnBg-50-1ts2L-VaMa-GxB_QuzIzCPXZEQ9F8Q0XUCPzo0aqmmnaycj7Pzb35w1zKSxmaFz4jcNZMTPPiOA6vY15iof4xzwMah3x4eIkQItGbOhFrV0JU5xOXrN087Q0U5Rf2_IaDbomtR"
+        />
+        <div
+          class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background/90"
+        ></div>
+      </div>
+      <div class="relative z-10 text-center px-6 max-w-4xl">
+        <span
+          class="font-label text-[10px] uppercase tracking-[0.4em] text-on-surface/60 mb-6 block"
+          >The Motion Collection</span
+        >
+        <h1
+          class="text-5xl md:text-8xl font-headline tracking-tighter text-on-surface mb-8 leading-none"
+        >
+          Captured <br />
+          <span class="italic font-normal">in Narrative</span>
+        </h1>
+        <p
+          class="font-body text-lg text-on-surface-variant max-w-xl mx-auto mb-10 leading-relaxed font-light"
+        >
+          Bridging the gap between fine art photography and cinematic
+          storytelling. Every frame a poem, every sequence a legacy.
+        </p>
+        <div class="flex justify-center gap-6">
+          <button class="flex items-center gap-2 group">
+            <span
+              class="w-12 h-12 flex items-center justify-center rounded-full border border-outline/30 group-hover:bg-primary group-hover:text-on-primary transition-all duration-500"
+            >
+              <span
+                class="material-symbols-outlined"
+                data-icon="play_arrow"
+                style="font-variation-settings: &quot;FILL&quot; 1"
+                >play_arrow</span
+              >
+            </span>
+            <span class="font-label text-xs uppercase tracking-widest font-bold"
+              >Watch Reel</span
+            >
+          </button>
+        </div>
+      </div>
+    </header>
+    <!-- Films Grid Section -->
+    <section class="py-32 px-8 max-w-screen-2xl mx-auto bg-surface">
+      <div
+        class="flex flex-col md:flex-row justify-between items-baseline mb-24 gap-8"
+      >
+        <div class="max-w-2xl">
+          <h2 class="text-4xl md:text-6xl font-headline tracking-tighter mb-6">
+            Short Stories
+          </h2>
+          <p class="font-body text-on-surface-variant text-lg">
+            A curated selection of editorial films exploring texture, light, and
+            the quiet moments between the movements.
+          </p>
+        </div>
+        <div
+          class="font-label text-[10px] uppercase tracking-widest border-b border-outline-variant/30 pb-2"
+        >
+          Filter by Genre: All Works
+        </div>
+      </div>
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-24"
+      >
+        <!-- Film Card 1 -->
+        <div class="group">
+          <div class="relative aspect-[16/9] overflow-hidden mb-8 shadow-sm">
+            <img
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              data-alt="Dreamy cinematic shot of a person walking through a misty pine forest in the early morning with soft diffused lighting"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbR0GWVcjtOMpdCW20oi-YZfFocNO0atJGt6SDyk4n9QjujtLyRux-NSVJ1cUDG89hSD70xYG722Tx5uEGG8Y8f1rMZhtyZ422x1t0nyJRJ7C1pTjpA54GESArfyNxhT9n35yZuNffByRh-e-SHBMG_F7VQIYOLC11qoEdVJv2KqyvGb62g7nB__XvNAQeVUi_nTxVuhG2wikKEwi1WiwnGMk3_19l810SJ_pTHjYZ9biprIppZd21fETNZqxk9AY9Q64ewZbvPwHR"
+            />
+            <div
+              class="absolute inset-0 bg-on-background/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center"
+            >
+              <span
+                class="material-symbols-outlined text-white text-5xl"
+                data-icon="play_circle"
+                >play_circle</span
+              >
+            </div>
+          </div>
+          <div class="px-2">
+            <h3
+              class="text-2xl font-headline mb-4 group-hover:text-primary transition-colors"
+            >
+              The Solstice Whispers
+            </h3>
+            <p
+              class="font-body text-on-surface-variant text-sm mb-8 leading-relaxed"
+            >
+              An intimate exploration of silence in the Swedish highlands,
+              documenting the transition from eternal day to the first shadows
+              of winter through a grain-heavy 16mm aesthetic.
+            </p>
+            <button
+              class="border border-outline-variant py-3 px-8 text-[10px] uppercase tracking-widest font-bold hover:bg-primary-container hover:text-on-primary-container hover:border-transparent transition-all duration-300"
+            >
+              View Film
+            </button>
+          </div>
+        </div>
+        <!-- Film Card 2 -->
+        <div class="group md:translate-y-16">
+          <div class="relative aspect-[16/9] overflow-hidden mb-8 shadow-sm">
+            <img
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              data-alt="Editorial fashion scene in a sun-drenched minimalist atelier with heavy shadows and warm beige fabrics draped over marble chairs"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEczwLCY4eqN0ZJVuf1KhPOtFixgyLJZRSIKsK8Nfak0vBL63cjOZaGN5UOAgbhnbek7Uz_YP079TxlZXx5qY3xwgS2OJ5M_j47Z4ej45ELo0edbwEmp-wNFv47C_HEIOTxk7yZcGwJaXUFL80C1RPLE_7x8tqq7zbWA8TPPkBXMwaLdF7ZTvLrTe_4gdImc04d31l-AxdrcGPUFf7QrQvzBK7LlUVemv6OTxpkiTRdFBDVtfqz2yqx39UfYtHCBmd0ZQt_XwFQuQG"
+            />
+            <div
+              class="absolute inset-0 bg-on-background/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center"
+            >
+              <span
+                class="material-symbols-outlined text-white text-5xl"
+                data-icon="play_circle"
+                >play_circle</span
+              >
+            </div>
+          </div>
+          <div class="px-2">
+            <h3
+              class="text-2xl font-headline mb-4 group-hover:text-primary transition-colors"
+            >
+              Atelier in Light
+            </h3>
+            <p
+              class="font-body text-on-surface-variant text-sm mb-8 leading-relaxed"
+            >
+              Following the process of an artisan weaver in Florence, this film
+              captures the rhythmic dance of thread and sunlight, elevating
+              everyday labor to a high-end visual symphony.
+            </p>
+            <button
+              class="border border-outline-variant py-3 px-8 text-[10px] uppercase tracking-widest font-bold hover:bg-primary-container hover:text-on-primary-container hover:border-transparent transition-all duration-300"
+            >
+              View Film
+            </button>
+          </div>
+        </div>
+        <!-- Film Card 3 -->
+        <div class="group">
+          <div class="relative aspect-[16/9] overflow-hidden mb-8 shadow-sm">
+            <img
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              data-alt="Macro shot of shimmering water surfaces and soft reflections of golden hour sunlight, ethereal and abstract mood"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_CLG-JVxEQNu9ZCIviJvyE6rehksB_N5idVfN4TqrYXNO3qlAl7Z4rb6g8lfz94kCk-HRI0kGbio0XvUV7z1a7LZaHkhnbK4uaj5d1azfZ63Q0WFIA9696AJ1agnWPY_B1IKSI3yaXupSxDN28-3oVRk-rVX6KNPDtt2BQ66eK8eG9LaKPnlLNCNHUzZpkFjIEl-JkLK0N-KazB2S_UIlr7Jb_O1dCSdAYK1oAytxrYs6o2fp31QYfQE8DvDo9A6VJg7t6XgpLMZD"
+            />
+            <div
+              class="absolute inset-0 bg-on-background/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center"
+            >
+              <span
+                class="material-symbols-outlined text-white text-5xl"
+                data-icon="play_circle"
+                >play_circle</span
+              >
+            </div>
+          </div>
+          <div class="px-2">
+            <h3
+              class="text-2xl font-headline mb-4 group-hover:text-primary transition-colors"
+            >
+              Liquid Amber
+            </h3>
+            <p
+              class="font-body text-on-surface-variant text-sm mb-8 leading-relaxed"
+            >
+              A sensory study of the Aegean sea at dusk. The narrative is told
+              entirely through the movement of light across water and the
+              tactile sensation of the warm coastal breeze.
+            </p>
+            <button
+              class="border border-outline-variant py-3 px-8 text-[10px] uppercase tracking-widest font-bold hover:bg-primary-container hover:text-on-primary-container hover:border-transparent transition-all duration-300"
+            >
+              View Film
+            </button>
+          </div>
+        </div>
+        <!-- Film Card 4 -->
+        <div class="group md:translate-y-16 lg:translate-y-0">
+          <div class="relative aspect-[16/9] overflow-hidden mb-8 shadow-sm">
+            <img
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              data-alt="Vibrant urban scene at night with soft neon blurs and cinematic rain reflections on the dark pavement"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxyKdozx92HbS3jwoUM9585fl2TMNnVRkZcBKxlpTEdfoq9LBSxN6g-rAk8Aaozaf21gEegk1C0M4pJF2XvLlxf2kPPE6IZ2YN18sY1ZiW5KHfZS1-vUB0R_h9wkFveYI_eqT1odhWjJBcsYmxj0zuTRj3BrB3n17HtGrzBSvEXsia6g8RCEGnsmf8HZVvx-Et_0G4zGD6tGOpJ3CY9ot9doR6g3NDcr21AtUpb4qu3RyFCcQ-71iXCnVe254PvPfKSsh0vV_mzLNs"
+            />
+            <div
+              class="absolute inset-0 bg-on-background/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center"
+            >
+              <span
+                class="material-symbols-outlined text-white text-5xl"
+                data-icon="play_circle"
+                >play_circle</span
+              >
+            </div>
+          </div>
+          <div class="px-2">
+            <h3
+              class="text-2xl font-headline mb-4 group-hover:text-primary transition-colors"
+            >
+              Neon Nocturne
+            </h3>
+            <p
+              class="font-body text-on-surface-variant text-sm mb-8 leading-relaxed"
+            >
+              A departure from the beige palette into the saturated shadows of
+              Tokyo at night. Exploring loneliness and connection in the world's
+              most populous urban landscape.
+            </p>
+            <button
+              class="border border-outline-variant py-3 px-8 text-[10px] uppercase tracking-widest font-bold hover:bg-primary-container hover:text-on-primary-container hover:border-transparent transition-all duration-300"
+            >
+              View Film
+            </button>
+          </div>
+        </div>
+        <!-- Film Card 5 -->
+        <div class="group md:translate-y-0 lg:translate-y-16">
+          <div class="relative aspect-[16/9] overflow-hidden mb-8 shadow-sm">
+            <img
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              data-alt="Interior of a historical library with tall oak shelves and shafts of dust-filled light hitting ancient book spines"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwzPjdWFqqgXQX5zQU_pQdEG9v2zDDsLL21mW0Kr0iZvr9st1KNjjS0bvvJeO4apllcCbZ2balrM6yoiNTDcRI3hjVRwNXWRCM7U4dklnybp4sxWhScn4HYw5xTHyXBf83_BNlSABoqnFdkZrjkedlh3ogkcMIrfuqDhqar1lYDbKYsqRUPQp2VkqGwvTpahB72tlr1tfm2Nue4DKsa636OldrepggpFJrMJLZSY0Ih0exObOKsTGZaf9R5LIGIs49wwuPbzzuIFGM"
+            />
+            <div
+              class="absolute inset-0 bg-on-background/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center"
+            >
+              <span
+                class="material-symbols-outlined text-white text-5xl"
+                data-icon="play_circle"
+                >play_circle</span
+              >
+            </div>
+          </div>
+          <div class="px-2">
+            <h3
+              class="text-2xl font-headline mb-4 group-hover:text-primary transition-colors"
+            >
+              The Architect's Dream
+            </h3>
+            <p
+              class="font-body text-on-surface-variant text-sm mb-8 leading-relaxed"
+            >
+              A meditative walk through the brutalist structures of Paris,
+              re-contextualized through a soft, feminine lens that finds the
+              grace in concrete and cold steel.
+            </p>
+            <button
+              class="border border-outline-variant py-3 px-8 text-[10px] uppercase tracking-widest font-bold hover:bg-primary-container hover:text-on-primary-container hover:border-transparent transition-all duration-300"
+            >
+              View Film
+            </button>
+          </div>
+        </div>
+        <!-- Film Card 6 -->
+        <div class="group md:translate-y-16 lg:translate-y-0">
+          <div class="relative aspect-[16/9] overflow-hidden mb-8 shadow-sm">
+            <img
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              data-alt="Minimalist architectural shot of a desert home at dawn with clean lines and soft peach sky background"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcMHbba2UjKHbFk-OTGTU_bZaGbPZb_qiVSwBkBvvuVHSTuRZvb-wEXVE8RmIEa7P0sZsIb9SkaqVwy8qdJhnYGC18wWqSzUrprjyoosKScxeDftw2LNp5FJeuz3s8FwauT1Wcpy-q6sqDxklapTkV7KgJgp82jsRn9w4mLrEjK5lv57e8923xoDpk1tWg6dh6FRmSPgrM9rG4uQXoJJZuX3RqYOoigH0Ar-uDf9Yhb_qW4QBECLg1klHWn8vXTjiOGvg4a8oLY4fb"
+            />
+            <div
+              class="absolute inset-0 bg-on-background/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center"
+            >
+              <span
+                class="material-symbols-outlined text-white text-5xl"
+                data-icon="play_circle"
+                >play_circle</span
+              >
+            </div>
+          </div>
+          <div class="px-2">
+            <h3
+              class="text-2xl font-headline mb-4 group-hover:text-primary transition-colors"
+            >
+              Arid Geometry
+            </h3>
+            <p
+              class="font-body text-on-surface-variant text-sm mb-8 leading-relaxed"
+            >
+              Exploring the intersection of modern architecture and the Mojave
+              desert. This film focuses on the harsh contrast of geometric
+              shadows and organic sand forms.
+            </p>
+            <button
+              class="border border-outline-variant py-3 px-8 text-[10px] uppercase tracking-widest font-bold hover:bg-primary-container hover:text-on-primary-container hover:border-transparent transition-all duration-300"
+            >
+              View Film
+            </button>
+          </div>
+        </div>
+        <!-- Film Card 7 -->
+        <div class="group">
+          <div class="relative aspect-[16/9] overflow-hidden mb-8 shadow-sm">
+            <img
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              data-alt="Artistic close up of an eye reflecting a vibrant sunrise over a mountain range, focus on the intricate iris details"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9wYQ_T3E7I8n0v5O_N_pG_R_S0T_U_V_W_X_Y_Z_0_1_2_3_4_5_6_7_8_9_A_B_C_D_E_F"
+            />
+            <div
+              class="absolute inset-0 bg-on-background/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center"
+            >
+              <span
+                class="material-symbols-outlined text-white text-5xl"
+                data-icon="play_circle"
+                >play_circle</span
+              >
+            </div>
+          </div>
+          <div class="px-2">
+            <h3
+              class="text-2xl font-headline mb-4 group-hover:text-primary transition-colors"
+            >
+              Visions of Dawn
+            </h3>
+            <p
+              class="font-body text-on-surface-variant text-sm mb-8 leading-relaxed"
+            >
+              Capturing the awakening of the world through a macro lens. A
+              visual poem about the clarity that comes with the first light of a
+              new day in the Alps.
+            </p>
+            <button
+              class="border border-outline-variant py-3 px-8 text-[10px] uppercase tracking-widest font-bold hover:bg-primary-container hover:text-on-primary-container hover:border-transparent transition-all duration-300"
+            >
+              View Film
+            </button>
+          </div>
+        </div>
+        <!-- Film Card 8 -->
+        <div class="group md:translate-y-16 lg:translate-y-16">
+          <div class="relative aspect-[16/9] overflow-hidden mb-8 shadow-sm">
+            <img
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              data-alt="High contrast black and white shot of a classic sail boat on a choppy ocean with dramatic sky"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuE8_I_J_K_L_M_N_O_P_Q_R_S_T_U_V_W_X_Y_Z_0_1_2_3_4_5_6_7_8_9_G_H_I_J_K_L"
+            />
+            <div
+              class="absolute inset-0 bg-on-background/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center"
+            >
+              <span
+                class="material-symbols-outlined text-white text-5xl"
+                data-icon="play_circle"
+                >play_circle</span
+              >
+            </div>
+          </div>
+          <div class="px-2">
+            <h3
+              class="text-2xl font-headline mb-4 group-hover:text-primary transition-colors"
+            >
+              Monochrome Tides
+            </h3>
+            <p
+              class="font-body text-on-surface-variant text-sm mb-8 leading-relaxed"
+            >
+              A raw, black and white narrative following a solo sailor's journey
+              across the Atlantic. Focusing on the textures of canvas, salt, and
+              endless horizons.
+            </p>
+            <button
+              class="border border-outline-variant py-3 px-8 text-[10px] uppercase tracking-widest font-bold hover:bg-primary-container hover:text-on-primary-container hover:border-transparent transition-all duration-300"
+            >
+              View Film
+            </button>
+          </div>
+        </div>
+        <!-- Film Card 9 -->
+        <div class="group">
+          <div class="relative aspect-[16/9] overflow-hidden mb-8 shadow-sm">
+            <img
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              data-alt="Cinematic shot of a vintage train passing through a lush green valley in Scotland during a light rainfall"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuF7_M_N_O_P_Q_R_S_T_U_V_W_X_Y_Z_0_1_2_3_4_5_6_7_8_9_M_N_O_P_Q_R_S_T"
+            />
+            <div
+              class="absolute inset-0 bg-on-background/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center"
+            >
+              <span
+                class="material-symbols-outlined text-white text-5xl"
+                data-icon="play_circle"
+                >play_circle</span
+              >
+            </div>
+          </div>
+          <div class="px-2">
+            <h3
+              class="text-2xl font-headline mb-4 group-hover:text-primary transition-colors"
+            >
+              The Highland Express
+            </h3>
+            <p
+              class="font-body text-on-surface-variant text-sm mb-8 leading-relaxed"
+            >
+              A nostalgic look at the golden age of travel. This film captures
+              the rhythmic clacking of tracks and the ethereal beauty of the
+              Scottish mist.
+            </p>
+            <button
+              class="border border-outline-variant py-3 px-8 text-[10px] uppercase tracking-widest font-bold hover:bg-primary-container hover:text-on-primary-container hover:border-transparent transition-all duration-300"
+            >
+              View Film
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Mid-Page Editorial Quote -->
+    <section class="py-48 px-8 bg-surface-container-low text-center">
+      <div class="max-w-4xl mx-auto">
+        <span
+          class="material-symbols-outlined text-primary text-4xl mb-12 block"
+          data-icon="format_quote"
+          >format_quote</span
+        >
+        <blockquote
+          class="text-4xl md:text-6xl font-headline leading-tight tracking-tight text-on-surface mb-12 italic"
+        >
+          "Photography is the pause button of life, but film is the heartbeat
+          that never stops."
+        </blockquote>
+        <p
+          class="font-label text-xs uppercase tracking-widest text-primary font-bold"
+        >
+          — Julien Moretti, Creative Director
+        </p>
+      </div>
+    </section>
+    <!-- Footer Component -->
+    <footer
+      class="w-full py-16 px-8 bg-[#f6f3ee] dark:bg-[#1c1c19] border-t border-[#d0c5af]/15"
+    >
+      <div class="flex flex-col items-center justify-center gap-8 w-full">
+        <div class="font-serif text-lg text-[#715b3e]">STUDIO</div>
+        <div
+          class="flex gap-12 font-['Manrope'] text-[10px] uppercase tracking-[0.1em] text-[#1c1c19]/40 dark:text-[#fcf9f4]/40"
+        >
+          <a
+            class="hover:underline-offset-4 hover:underline transition-all duration-300"
+            href="#"
+            >Editorial</a
+          >
+          <a
+            class="text-[#715b3e] dark:text-[#caae8d] hover:underline-offset-4 hover:underline transition-all duration-300"
+            href="#"
+            >Contact Us</a
+          >
+          <a
+            class="hover:underline-offset-4 hover:underline transition-all duration-300"
+            href="#"
+            >Instagram</a
+          >
+        </div>
+        <div
+          class="font-['Manrope'] text-[10px] uppercase tracking-[0.1em] text-[#1c1c19]/40 dark:text-[#fcf9f4]/40"
+        >
+          © 2024 Photography Studio. All rights reserved.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

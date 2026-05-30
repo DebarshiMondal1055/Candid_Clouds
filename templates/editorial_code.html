@@ -1,0 +1,293 @@
+<html class="light" lang="en">
+  <head></head>
+  <body class="bg-background text-on-background">
+    ```html
+
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@300;400;500;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary-container": "#49443f",
+              "on-error-container": "#93000a",
+              tertiary: "#635e57",
+              error: "#ba1a1a",
+              "surface-container-highest": "#e5e2dd",
+              primary: "#715b3e",
+              "on-surface": "#1c1c19",
+              "tertiary-fixed-dim": "#cdc5bd",
+              "surface-dim": "#dcdad5",
+              "on-secondary-fixed-variant": "#524700",
+              "inverse-surface": "#31302d",
+              "on-primary": "#ffffff",
+              "on-secondary-fixed": "#211b00",
+              "error-container": "#ffdad6",
+              secondary: "#6c5e06",
+              "tertiary-container": "#b9b2aa",
+              background: "#fcf9f4",
+              "primary-fixed": "#fcdeba",
+              "on-primary-fixed-variant": "#574329",
+              "on-primary-fixed": "#281903",
+              "on-primary-container": "#554227",
+              "surface-container-lowest": "#ffffff",
+              "on-secondary": "#ffffff",
+              "tertiary-fixed": "#e9e1d9",
+              "surface-tint": "#715b3e",
+              "on-tertiary-fixed": "#1e1b16",
+              "inverse-primary": "#dfc29f",
+              "secondary-container": "#f7e382",
+              outline: "#7f7663",
+              "surface-container": "#f0ede8",
+              "on-tertiary": "#ffffff",
+              "secondary-fixed": "#f7e382",
+              "on-surface-variant": "#4d4635",
+              "primary-fixed-dim": "#dfc29f",
+              "surface-container-high": "#ebe8e3",
+              "on-background": "#1c1c19",
+              "surface-container-low": "#f6f3ee",
+              "on-secondary-container": "#73640e",
+              "on-error": "#ffffff",
+              "outline-variant": "#d0c5af",
+              "on-tertiary-fixed-variant": "#4b4640",
+              "secondary-fixed-dim": "#dac769",
+              "primary-container": "#caae8d",
+              "surface-variant": "#e5e2dd",
+              surface: "#fcf9f4",
+              "inverse-on-surface": "#f3f0eb",
+              "surface-bright": "#fcf9f4",
+            },
+            borderRadius: {
+              DEFAULT: "0.125rem",
+              lg: "0.25rem",
+              xl: "0.5rem",
+              full: "0.75rem",
+            },
+            fontFamily: {
+              headline: ["Noto Serif"],
+              body: ["Manrope"],
+              label: ["Manrope"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+        display: inline-block;
+        line-height: 1;
+      }
+      body {
+        font-family: "Manrope", sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+      h1,
+      h2,
+      h3 {
+        font-family: "Noto Serif", serif;
+      }
+      .editorial-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: 25vw;
+      }
+      @media (max-width: 768px) {
+        .editorial-grid {
+          grid-template-columns: repeat(2, 1fr);
+          grid-auto-rows: 50vw;
+        }
+      }
+    </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+    <!-- TopAppBar -->
+    <nav
+      class="fixed top-0 w-full z-50 bg-[#fcf9f4]/70 dark:bg-[#1c1c19]/70 backdrop-blur-[24px] flex justify-between items-center px-12 py-8 w-full transition-colors duration-500 no-border"
+    >
+      <div class="flex items-center gap-4">
+        <span
+          class="material-symbols-outlined text-[#715b3e] dark:text-[#caae8d] cursor-pointer"
+          >menu</span
+        >
+        <span
+          class="text-2xl font-serif italic text-[#1c1c19] dark:text-[#fcf9f4]"
+          >STUDIO ETHER</span
+        >
+      </div>
+      <div class="hidden md:flex gap-12 items-center">
+        <a
+          class="font-serif text-[Noto Serif] tracking-[-0.02em] uppercase text-[#715b3e] dark:text-[#caae8d] font-bold hover:text-[#715b3e] transition-all duration-300 ease-out"
+          href="#"
+          >PORTFOLIO</a
+        >
+        <a
+          class="font-serif text-[Noto Serif] tracking-[-0.02em] uppercase text-[#1c1c19]/60 dark:text-[#fcf9f4]/60 hover:text-[#715b3e] transition-all duration-300 ease-out"
+          href="#"
+          >JOURNAL</a
+        >
+        <a
+          class="font-serif text-[Noto Serif] tracking-[-0.02em] uppercase text-[#1c1c19]/60 dark:text-[#fcf9f4]/60 hover:text-[#715b3e] transition-all duration-300 ease-out"
+          href="#"
+          >STUDIO</a
+        >
+      </div>
+      <button
+        class="font-serif text-[Noto Serif] tracking-[-0.02em] uppercase text-[#715b3e] dark:text-[#caae8d] ease-out duration-300 hover:opacity-80"
+      >
+        CONTACT
+      </button>
+    </nav>
+    <main class="pt-40">
+      <!-- Hero Section -->
+      <section class="px-12 mb-24 max-w-7xl mx-auto">
+        <div
+          class="flex flex-col md:flex-row items-baseline justify-between gap-12"
+        >
+          <div class="max-w-2xl">
+            <span
+              class="text-[10px] font-label tracking-[0.2em] text-primary uppercase mb-6 block"
+              >Volume IV — The Curated Light</span
+            >
+            <h1
+              class="text-7xl md:text-8xl font-headline tracking-tighter leading-none mb-8"
+            >
+              L'Artiste <br /><span class="italic font-normal">Editorial</span>
+            </h1>
+          </div>
+          <div class="max-w-md">
+            <p
+              class="text-lg font-body leading-relaxed text-on-surface-variant font-light"
+            >
+              A study of permanence and ephemeral beauty. This collection
+              explores the dialogue between historical architecture and
+              contemporary silhouette, bathed in the soft, warm tones of the
+              Mediterranean golden hour.
+            </p>
+            <div class="mt-8 flex items-center gap-4 group cursor-pointer">
+              <div
+                class="h-[1px] w-12 bg-outline-variant group-hover:w-20 transition-all duration-500"
+              ></div>
+              <span class="text-[10px] font-label tracking-[0.1em] uppercase"
+                >Scroll to Discover</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Seamless Editorial Grid -->
+      <section class="w-full bg-surface-container-low">
+        <div class="editorial-grid">
+          <!-- Grid Item 1 -->
+          <div class="relative overflow-hidden group">
+            <img
+              alt="Editorial Fashion"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              data-alt="high-fashion editorial portrait of a woman in a flowing silk cream dress against a sun-drenched limestone wall"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAd9mw1HVrV7Y-DsS49yZC6wuDm4watSqt6tsZl7Wv4p575VoZBPpJQa_3OCp3GkRoHZnLSl_69rchSH_VDuoMj2uAfai9oX7P0FIWGFmP1Ek6PqHX0WeWVWhPf9bLT0UkmlLljsc-ocXU7nBFyKYkdXTEulkttLVvyC-maziK2T5PJr2UJFOSE8bZatzC5iT8wFwpadv2Z68zqLHMzOF7UbISV05ZGHuqHMqcAbkYmi686j3Q9YkLulvdo-dq7vLq9EkDe90JmnWMj"
+            />
+            <div
+              class="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+            ></div>
+          </div>
+          <!-- Grid Item 2 (Large Vertical) -->
+          <div class="relative overflow-hidden group md:row-span-2">
+            <img
+              alt="Architectural Detail"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              data-alt="dramatic architectural shot of a spiral stone staircase in a Parisian atelier with soft shadows and golden morning light"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0XsmhzE0l1dvVihk_31ApYN-REhIEr8N-MexzKd6TBVaPai-HBrHICsXBlJBfzckVPtYSH5wLaK0N2suMWPUnc8CTvy1pM6IBp1c2SRLEKkIBG6stEDUyvydJFyL7XRBqF9Ba3khY_qtTr7Ma8YtoJbNfaR-eeMdTQ4k_DiBgteWI4ikyW6sqG0WrcwSMGab50Si1gm2hKs-dPztP6r9JSMojy35qM7II_gglqkVwtnTYHCwCyn3dBMg5RYeGabEN1dBoywJGdRwo"
+            />
+          </div>
+          <!-- Grid Item 3 -->
+          <div class="relative overflow-hidden group">
+            <img
+              alt="Still Life"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              data-alt="minimalist still life of a ceramic vase and dried wildflowers on a sand-colored linen tablecloth with soft natural lighting"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDChyhILfUI-UUNJAvq680cyCiK7dJ_BeFnq299Q8GnWkj6cEu275d6YRW6SwzGuFLr0CqTI0CRuBgO-cp5h3sPcCY2MoBIzwK98bFwmue5rTUivXD7ejbW2ZkXsJWlAAkg8-eKe7OtqOLoTvK0LqrjD3VxSog5oiOGmH-C3N65EXKiomtBa5PVkCPbRTo9V0u-FuKD4yVF27ieqyOT0SJXNvmsh8d6tgPxOjretNDGkKVFQkFn-3RIy54Te4LVUkoTsiD5MXaHXrja"
+            />
+          </div>
+          <!-- Grid Item 4 -->
+          <div class="relative overflow-hidden group">
+            <img
+              alt="Atmospheric Landscape"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              data-alt="ethereal landscape of rolling sand dunes at dusk with a soft haze and warm peach sky tones"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXcwlKLkUzwmJ03MG3Zqd-v09HsfKbSGl0g_TK8TgAW-PDRIzDblzGtWquu00wyw199Hz6prO51LG8hEiIvUNJT_byI8n6HnkTX_gTYXiv8uskWmV3LchgYsswbvLQxAmf_YOdOTAZ98y-DyAmWcGTa9MQTfiv5NTvzjwIFf6Csl3oKWaq3YGaWl2Yw1igceiYe_caYlzkp0YaFQvQx3i09n1K722BPX7TVXG0dDpsK5Cj1ejbp10iv5-TBmaslFBKkgbmYD1D0fhC"
+            />
+          </div>
+          <!-- Grid Item 5 -->
+          <div class="relative overflow-hidden group">
+            <img
+              alt="Fashion Silhouette"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              data-alt="blurred motion silhouette of a model walking through a sunlit colonnade with high contrast warm light"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJP0nByO8aJPzC-3tzGJblCxzjQoSmz1OQa5BdSjhOvXiOR03Kd4rIaye-qKrmyR8_xyRP7Q4I3t8PN7Xx96hXdwpQuFaKjGzPeAbTq5Y6Gz4Ox-dZ-_jS29PLKxSBB6RaRqv1Ozsyq7W28hENqEctscFgWyrb2Zf-_N-HorEBcHAycOrMap9qRH95bCS7hEr0NRmNxooAk4ZPYYGYYpBLJm1Tq6fiurGDZrMvFTKKZR6u1NhZHX3ekT8PKrm4RRRpHQbHOD4f4-aF"
+            />
+          </div>
+          <!-- Grid Item 6 -->
+          <div class="relative overflow-hidden group">
+            <img
+              alt="Detail Shot"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              data-alt="macro detail of delicate lace fabric catching light, showing intricate textures in warm cream and beige tones"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVMBX92YMSao8qDPAOQW0W0Z_wkU7j-FLn7xbLKudEqJykPGPu3ZYJk4qlPrX-wDdR9ROUywmCVIJPGyljpQ2O9NIDHqlypysJoTVqdqOZhEzDeYbaDzNjQX4MdNOwyvqM0Q1Byl_SiN0hb0pjfzAzWe7VDmAvcan-tRYOF7gxBA__KQLiQEhXPDG_zAtc7IB4gpg-ADyXblt6Qz3iT2NKuhlJQtQM8nGFHZaiabcWftdY1OE5HBHYWU75m2E76Ea6NaBmaiN7kz8D"
+            />
+          </div>
+          <!-- Grid Item 7 (Horizontal) -->
+          <div class="relative overflow-hidden group md:col-span-2">
+            <img
+              alt="Interior Design"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              data-alt="spacious high-end interior with minimalist furniture, large windows, and soft golden light filtering through linen curtains"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8nFv0knlmTDutN-hYSPKix2p0-9rSvjy7AONtYTdekJeRpnA6uOTd5s70q_KxD3zHlFB2f9bB4q8Dtg92Et1ytvsP2P5iCSCpqhFxw6sOqgBFwc74Lfo81ueUGNzDcaGbqkMX6chg4QKEeH_rtMI2-QvE0RjbaYiosUZkbtcejMsRd3SE0eSXSi4ov_4r-VEoi4-TwyWHWA6q0GuLRUJnJNtb2rZaW5h6qROGgoYNIX8Vh0UiqhCNKgpTUiofIfyASY-q0X2HiD8f"
+            />
+          </div>
+          <!-- Grid Item 8 -->
+          <div class="relative overflow-hidden group">
+            <img
+              alt="Portrait"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              data-alt="close-up profile portrait of a man with dramatic side lighting against a dark warm ochre background"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxQefnOJzEywyBwvPAIUrqF1ZPmsyqANJbeKW9smi2-ZwIIXy8k65Tgzv_q0slj_cs8tpDVbM3mWkxubedm-ZzlGRLqBDGiBTQsHp8yD1ZaB059WnmexCn7BTQ0fStJcKgR8YPyklYZb1Jr6lKMsN4_F2t-Qy48tdenofvawckcmImgokNO8VR4WBHNOPM4R0ZbTEqOMK6lb7sDN7NDymTrY9jKSFL_aKWzb84VsRj39bpXYEyw8Vp2CRRs7NVSmhx5W5eU9jmEt2e"
+            />
+          </div>
+          <!-- Grid Item 9 -->
+          <div class="relative overflow-hidden group">
+            <img
+              alt="Texture Study"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              data-alt="abstract texture of cracked dry earth in warm sienna tones with low-angle sunlight creating deep shadows"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtct7yUS34KjsdRxnzCEsTShAY15JZK4GfP4-wrsTHU2cXu9BrwdSX03qbzk3C_3BTIEZkWGVigmPJBYLAIoD7hbXS97UvEMd8ONuBoajuclcZXr688TfyDS-XbTJeTc9AEPK2R2XPM99Q2OGxNlg3vBvImEmUZBfiFVS-KyyO8fLO5dK5ehW-PKvZSFcLinVJmPz7VmWeh4PGKZTeyr2AShlvkPgx7ecreZKEtPmqE7fv2tNCenlKU25kJr0x5ZgMC4600v9Xr1BO"
+            />
+          </div>
+          <!-- Grid Item 10 -->
+          <div class="relative overflow-hidden group"></div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
